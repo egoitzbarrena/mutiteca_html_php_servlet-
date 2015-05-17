@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color: white;
+}
+
+#adddisco {
+    display: inline-block;
+    width : 750px; 
+    height : 250px;
+    margin-left: 100px;
+    margin-right: 50px;  
+}
+
+#addmovie {
+    display: inline-block;
+    width : 750px; 
+    height : 250px;
+    margin-left: 100px;
+    margin-right: 50px;  
+}
+
+#addbook {
+    display: inline-block;
+    width : 750px; 
+    height : 250px;
+    margin-left: 100px;
+    margin-right: 50px;  
+}
+#menu {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+    margin-left: 100px;
+    margin-right: 50px;  
+}

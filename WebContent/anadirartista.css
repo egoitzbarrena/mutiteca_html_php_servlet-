@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color: white;
+    background-image: ;
+    background-size: cover;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 50px;
+    font-family:verdana;
+}
+th {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family:verdana;
+}
+
+#nombre {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+
+#tipo {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+
+#select{
+    font-size: 30px;
+}
+
+#anoNacimiento {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;  
+}
+
+#image {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+
+#submit {
+    display: inline-block;
+    width : 75px; 
+    height : 75px;
+    margin-top:50px;
+    margin-left: 50px;
+    margin-right: 50px;  
+}
+
+#menu {
+    display: inline-block;
+    width : 75px; 
+    height : 75px;
+    margin-top:50px;
+    margin-left: 100px;
+    margin-right: 50px;  
+}

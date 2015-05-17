@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color: white;
+    background-image: url("o-BOOKS-facebook.png");
+    background-size: cover;
+}
+
+table, th {
+    border: 0px solid black;
+	font-size:20px;
+	color: black
+	border: 0px solid white;
+}
+
+table,td {
+    border: 0px solid black;
+font-size:20px;
+color: black;
+border: 0px solid white;
+}

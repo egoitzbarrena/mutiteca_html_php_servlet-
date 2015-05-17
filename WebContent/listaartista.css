@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+
+body {
+    background-color: white;
+    background-image: url("i_am_an_artist_marta-altes_lr.png");
+    background-size: cover;
+}
+
+table, th {
+    border: 0px solid black;
+	font-size:20px;
+	color: black;
+	border: 0px solid white;
+}
+
+table,td {
+    border: 0px solid black;
+font-size:20px;
+color: black;
+border: 0px solid white;
+}

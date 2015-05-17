@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color: white;
+    margin-top:50px;
+    background-image:url(HiRes2.png);
+     background-size: cover;
+}
+
+h1 {
+    color: #f8fbff;
+    text-align: center;
+    font-size: 50px;
+    font-family:verdana;
+}
+
+#añadir {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+    margin-left: 300px;
+    margin-right: 50px;  
+}
+
+#addartista {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+    margin-left: 300px;
+    margin-right: 50px;  
+}
+
+#buscar {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+     margin-left: 300px;
+    margin-right: 50px;  
+}
+
+
+#lista {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+     margin-left: 300px;
+    margin-right: 50px;  
+}
+
+
+#modificar {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+     margin-left: 300px;
+    margin-right: 50px;  
+}
+
+
+#borrar {
+    display: inline-block;
+    width : 100px; 
+    height : 100px;
+     margin-left: 300px;
+    margin-right: 50px;  
+}
+
+
+#pelicula {
+    display: inline-block;
+    width : 500px; 
+    height : 400px;
+    margin-top:100px; 
+}
+
+#disco {
+    display: inline-block;
+    width : 500px; 
+    height : 400px;
+    margin-top:100px;
+      
+}
+
+#libro {
+    display: inline-block;
+    width : 500px; 
+    height : 400px;
+    margin-top:100px;
+     
+}

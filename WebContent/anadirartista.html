@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AÑADIR ARTISTA</title>
+<link rel="stylesheet" type="text/css" href="anadirartista.css">
+<script type="text/javascript" language="JavaScript">
+
+function carga(){
+	document.getElementById("nombre").focus();
+}
+function valideDatos(){
+	
+	var nombre = document.getElementById("nombre");
+	var tipo = document.getElementById("tipo");
+	var anoNacimiento = document.getElementById("anoNacimiento");
+	var image = document.getElementById("image");
+	
+	
+	 if ((nombre.value == "" || nombre.value == '' || nombre.value == null) &&
+		(tipo.value == "" || tipo.value == '' || tipo.value == null) &&
+		(anoNacimiento.value == "" || anoNacimiento.value == '' || anoNacimiento.value == null) &&
+		(image.value == "" || image.value == '' || image.value == null)){
+			alert ("inserta los datos del formulario");
+			tipo.focus();
+			return false;
+		 } else if (nombre.value == "" || nombre.value == '' || nombre.value == null){
+			alert ("Inserta el nombre del artista");
+			tipo.focus();
+			return false;
+	 	} else if (tipo.value == "" || tipo.value == '' || tipo.value == null){
+			alert ("Inserta el tipo de artista");
+			tipo.focus();
+			return false;
+		} else if (anoNacimiento.value == "" || anoNacimiento.value == '' || anoNacimiento.value == null){
+		alert ("Inserta el año de nacimiento del artista");
+		titulo.focus();
+		return false;
+	} else if (image.value == "" || image.value == '' || image.value == null){
+		alert ("Inserta la imagen del artista");
+		image.focus();
+		return false;	
+	} else{
+		return true;
+	}
+}
+
+</script>
+
+</head>
+<body onload="carga();" >
+<h1>INSERTA LOS</h1>
+<h1> DATOS DEL ARTISTA</h1>
+	<form action="insertar-artista.jr" method="POST" onsubmit="return valideDatos();">
+	<table border="0" align="center">
+	<tr>
+	<th>Nombre</th>
+	<td><input type="text" id="nombre" name="nombre" value=""/></td>
+	</tr>
+	<tr>
+	<th>Tipo</th>
+	<td><select name="tipo" id="tipo">
+  		<option value="Escritor">Escritor</option>
+  		<option value="Actor">Actor</option>
+  		<option value="Musico">Musico</option>
+  		<option value="Cantante">Cantante</option>
+</select></td>
+	</tr>
+	<tr>
+	<th>Año de Nacimiento</th>
+	<td><input type="number" id="anoNacimiento" name="anoNacimiento" min="1800" max="2015"></td>
+	</tr>
+	<tr>
+	<th>Foto</th>
+	<td><input type="file" name="image" id="image" accept="image/*"></td>
+	</tr>
+	<tr>
+	<td><input type="image" src="artist-icon.png" id="submit" alt="submit"></td>
+	<td><a href="index.html"><img id="menu" src="home-icon.png"></a> </td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

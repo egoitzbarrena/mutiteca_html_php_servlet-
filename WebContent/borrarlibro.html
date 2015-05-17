@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BORRAR LIBRO</title>
+<script type="text/javascript">
+
+function carga(){
+	document.getElementById("isbn").focus();
+}
+function valideDatos(){
+	
+	var isbn = document.getElementById("isbn")
+	
+	if (isbn.value == "" || isbn.value == '' || isbn.value == null){
+		alert ("introduce isbn");
+		return false;
+	}
+}
+
+</script>
+
+</head>
+<body onload="carga();">
+<h1>BORRAR LIBRO</h1>
+	<form action="borrar-libro.jr" method="POST" onsubmit="return valideDatos();">
+	<label for="titulo">ISBN</label><br />
+		<input type="text" id="isbn" name="isbn" value=""/> <br>
+	
+	
+	<button type="submit" name="submit" value="1" >BORRAR LIBRO </button>
+		<input type="button" Value="INICIO" Onclick="window.location.href='index.html'">
+	</form>
+	
+</body>
+</html>

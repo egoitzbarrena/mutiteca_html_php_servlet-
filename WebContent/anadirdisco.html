@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AÑADIR DISCO</title>
+<link rel="stylesheet" type="text/css" href="anadirdisco.css">
+<script type="text/javascript" language="JavaScript">
+
+function carga(){
+	document.getElementById("titulo").focus();
+}
+function valideDatos(){
+	
+	var ismn = document.getElementById("ismn");
+	var titulo = document.getElementById("titulo");
+	var autor = document.getElementById("autor");
+	var anoEdicion = document.getElementById("anoEdicion");
+	var discografica = document.getElementById("discografica");
+	var numCanciones = document.getElementById("numCanciones");
+	
+	
+	 if ((ismn.value == "" || ismn.value == '' || ismn.value == null) &&
+		(titulo.value == "" || titulo.value == '' || titulo.value == null) &&
+		(autor.value == "" || autor.value == '' || autor.value == null) &&
+		(anoEdicion.value == "" || anoEdicion.value == '' || anoEdicion.value == null) && 
+		(discografica.value == "" || discografica.value == '' || discografica.value == null) &&
+		(numCanciones.value == "" || numCanciones.value == '' || numCanciones.value == null)){
+			alert ("inserta los datos del formulario");
+			titulo.focus();
+			return false;
+	 	} else if (ismn.value == "" || ismn.value == '' || ismn.value == null){
+			alert ("Inserta el ismn del disco");
+			ismn.focus();
+			return false;
+		} else if (titulo.value == "" || titulo.value == '' || titulo.value == null){
+		alert ("Inserta el titulo del disco");
+		titulo.focus();
+		return false;
+		
+	} else if (autor.value == "" || autor.value == '' || autor.value == null){
+		alert ("Inserta el autor del disco");
+		autor.focus();
+		return false;
+	} else if (anoEdicion.value == "" || anoEdicion.value == '' || anoEdicion.value == null){
+		alert ("Inserta el año de edicion del disco");
+		anoEdicion.focus();
+		return false;
+	} else if (discografica.value == "" || discografica.value == '' || discografica.value == null){
+		alert ("Inserta la discografica del disco");
+		discografica.focus();
+		return false;
+	} else if (numCanciones.value == "" || numCanciones.value == '' || numCanciones.value == null){
+		alert ("Inserta el numero de canciones");
+		numCanciones.focus();
+		return false;	
+		
+	} else{
+		return true;
+	}
+}
+
+</script>
+
+</head>
+<body onload="carga();" >
+<h1>INSERTA LOS</h1>
+<h1> DATOS DEL DISCO</h1>
+	<form action="insertar-disco.jr" method="POST" onsubmit="return valideDatos();">
+	<table border="0" align="left">
+	<tr>
+	<th>ISMN</th>
+	<td><input type="number" id="ismn" name="ismn" value="" min="1000000000001" size="13" pattern="[0-9]{13}"/></td>
+	</tr>
+	<tr>
+	<th>Titulo</th>
+	<td><input type="text" id="titulo" name="titulo" value=""/></td>
+	</tr>
+	<tr>
+	<th>Autor</th>
+	<td><input type="text" id="autor" name="autor" value=""/></td>
+	</tr>
+	<tr>
+	<th>Año de Edicion</th>
+	<td><input type="number" id="anoEdicion" name="anoEdicion" min="1900" max="2015"></td>
+	</tr>
+	<tr>
+	<th>Discografica</th>
+	<td><input type="text" id="discografica" name="discografica" value=""/></td>
+	</tr>
+	<tr>
+	<th>Numero de Canciones</th>
+	<td><input type="number" id="numCanciones" name="numCanciones" min="1" max="30"></td>
+	</tr>
+	<tr>
+	<td><input type="image" src="cd-add-icon.png" id="submit" alt="submit"></td>
+	<td><a href="index.html"><img id="menu" src="home-icon.png"></a> </td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

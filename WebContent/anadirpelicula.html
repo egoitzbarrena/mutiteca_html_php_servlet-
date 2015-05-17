@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AÑADIR VEHICULO</title>
+<script type="text/javascript">
+
+function carga(){
+	document.getElementById("isan").focus();
+}
+function valideDatos(){
+	
+	var isan = document.getElementById("isan")
+	var titulo = document.getElementById("titulo");
+	var nombreautor = document.getElementById("nombreautor");
+	var añonacimientoautor = document.getElementById("añonacimientoautor");
+	var añoedicion = document.getElementById("añoedicion");
+	var productora = document.getElementById("productora");
+	var interprete1 = document.getElementById("interprete1");
+	var interprete2 = document.getElementById("interprete2");
+	var interprete3 = document.getElementById("interprete3");
+	
+	if (isan.value == "" || isan.value == '' || isan.value == null){
+		alert ("introduce isan");
+		return false;
+	} else if (titulo.value == "" || titulo.value == '' || titulo.value == null){
+		alert ("introduce titulo");
+		return false;
+	} else if (nombreautor.value == "" || nombreautor.value == '' || nombreautor.value == null){
+		alert ("introduce nombreautor");
+		return false;	
+	}else if (añonacimientoautor.value == "" || añonacimientoautor.value == '' || añonacimientoautor.value == null){
+		alert ("introduce añonacimientoautor");
+		return false;
+	} else if (añoedicion.value == "" || añoedicion.value == '' || añoedicion.value == null){
+		alert ("introduce el año de edicion");
+		return false;
+	} else if (productora.value == "" || productora.value == '' || productora.value == null){
+		alert ("introduce productora");
+		return false;
+	} else if (interprete1.value == "" || interprete1.value == '' || interprete1.value == null){
+		alert ("introduce interprete1");
+		return false;
+	} else if (interprete2.value == "" || interprete2.value == '' || interprete2.value == null){
+		alert ("introduce interprete2");
+		return false;	
+	} else if (interprete3.value == "" || interprete3.value == '' || interprete3.value == null){
+		alert ("introduce interprete3");
+		return false;	
+		
+	} else if (isan.value == "" || isan.value == '' || isan.value == null) &&
+	(titulo.value == "" || titulo.value == '' || titulo.value == null) &&
+	(nombreautor.value == "" || nombreautor.value == '' || nombreautor.value == null) &&
+	(añonacimientoautor.value == "" || añonacimientoautor.value == '' || añonacimientoautor.value == null) &&
+	(añoedicion.value == "" || añoedicion.value == '' || añoedicion.value == null) && 
+	(productora.value == "" || productora.value == '' || productora.value == null) &&
+	(interprete1.value.value == "" || interprete1.value.value == '' || interprete1.value.value == null){
+		alert ("inserta los datos");
+		titulo.focus();
+		return false;
+	} else {
+		return true;
+	}
+}
+
+</script>
+
+</head>
+<body onload="carga();">
+<h1>INSERTA LOS DATOS DE LA PELICULA</h1>
+	<form action="insertar-pelicula.jr" method="POST" onsubmit="return valideDatos();">
+	<label for="titulo">ISAN</label><br />
+		<input type="text" id="isan" name="isan" value=""/> <br>
+	<label for="titulo">Titulo</label><br />
+		<input type="text" id="titulo" name="titulo" value="" /> <br>
+	<label for="nombreautor">Nombre Autor</label><br />
+		<input type="text" id="nombreautor" name="nombreautor" value="" /> <br>
+	<label for="añonacimientoautor">Año nacimiento Autor</label><br />
+		<input type="text" id="añonacimientoautor" name="añonacimientoautor" value="" /> <br>
+	<label for="anoedicion">Año de edicion</label><br />
+		<input type="number" id="anoedicion" name="anoedicion" value="" /> <br>
+  	<label for="productora">productora</label><br />
+  		<input type="radio" id="productora" name="productora" value="warnerbros" checked>Warner Bros<br />
+  		<input type="radio" id="productora" name="productora" value="universalpictures">Universal Pictures<br />
+  		<input type="radio" id="productora" name="productora" value="20thcenturyfox">20th Century Fox<br />
+  		<input type="radio" id="productora" name="productora" value="paramountpictures">Paramount Pictures<br />
+  		<input type="radio" id="productora" name="productora" value="dreamworkspictures">Dream Works Pictures<br />
+  	<label for="interprete">Interprete1</label><br />
+		<input type="text" id="interprete1" name="interprete1" value=""/> <br><br>
+	<label for="interprete">Interprete2</label><br />
+		<input type="text" id="interprete2" name="interprete2" value=""/> <br><br>
+	<label for="interprete">Interprete3</label><br />
+		<input type="text" id="interprete3" name="interprete3" value=""/> <br><br>
+	
+	<button type="submit" name="submit" value="1" >INSERTAR PELICULA </button>
+		<input type="button" Value="INICIO" Onclick="window.location.href='index.html'">
+	</form>
+	
+</body>
+</html>

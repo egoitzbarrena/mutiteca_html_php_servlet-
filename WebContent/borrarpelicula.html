@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BORRAR PELICULA</title>
+<script type="text/javascript">
+
+function carga(){
+	document.getElementById("isan").focus();
+}
+function valideDatos(){
+	
+	var isan = document.getElementById("isan")
+	
+	if (isan.value == "" || isan.value == '' || isan.value == null){
+		alert ("introduce isan");
+		return false;
+	}
+}
+
+</script>
+
+</head>
+<body onload="carga();">
+<h1>BORRAR PELICULA</h1>
+	<form action="borrar-pelicula.jr" method="POST" onsubmit="return valideDatos();">
+	<label for="titulo">ISAN</label><br />
+		<input type="text" id="isan" name="isan" value=""/> <br>
+	
+	
+	<button type="submit" name="submit" value="1" >BORRAR PELICULA </button>
+		<input type="button" Value="INICIO" Onclick="window.location.href='index.html'">
+	</form>
+	
+</body>
+</html>
